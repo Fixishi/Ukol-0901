@@ -1,0 +1,88 @@
+body {
+    background-color: #232323;
+    color: #fff;
+    font-family: sans-serif;
+}
+h1 {
+    text-align: center;
+    font-size:420%;
+    font-weight: normal;
+    margin: 0px ;
+    color: aquamarine;
+    background-color: rgb(140, 0, 255);
+}
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+    margin: 10px;
+    display: inline-block;
+    border-radius: 50px;
+}
+#colors {
+    text-align: center;
+}
+.line {
+    text-align: center;
+    background-color: #fff;
+}
+#message {
+    text-align: center;
+    margin-top: 10px;
+    display: inline-block;
+    color : #8c00ff;
+    font-weight: normal;
+    font-size: 20px;
+}
+#reset {
+    background-color: #8c00ff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 10px;
+}
+#reset:hover {
+    background-color: darkslategray;
+    color: #fff;
+}
+#easyBtn {
+    background-color: forestgreen;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 10px;
+}
+#easyBtn:hover {
+    background-color: darkslategray;
+    color: #fff;
+}
+#midBtn {
+    background-color: orange;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 10px;
+}
+#midBtn:hover {
+    background-color: darkslategray;
+    color: #fff;
+}
+#hardBtn {
+    background-color: red;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 10px;
+}
+#hardBtn:hover {
+    background-color: darkslategray;
+    color: #fff;
+}

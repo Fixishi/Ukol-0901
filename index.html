@@ -1,100 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Color Guessing Game</title>
 </head>
-<style>
-    body {
-        background-color: #232323;
-        color: #fff;
-        font-family: sans-serif;
-    }
-    h1 {
-        text-align: center;
-        font-size:420%;
-        font-weight: normal;
-        margin: 0px ;
-        color: aquamarine;
-        background-color: rgb(140, 0, 255);
-    }
-    .square {
-        width: 100px;
-        height: 100px;
-        background-color: #232323;
-        margin: 10px;
-        display: inline-block;
-    }
-    #barvy {
-        text-align: center;
-    }
-    .line {
-        text-align: center;
-        background-color: #fff;
-    }
-    .message {
-        text-align: center;
-        margin-top: 10px;
-        display: inline-block;
-        color : #8c00ff;
-    }
-    #reset {
-        background-color: #8c00ff;
-        color: #fff;
-        border: none;
-        padding: 10px;
-        font-size: 20px;
-        cursor: pointer;
-        margin: 10px;
-    }
-    #reset:hover {
-        background-color: darkslategray;
-        color: #fff;
-    }
-    #easyBtn {
-        background-color: forestgreen;
-        color: #fff;
-        border: none;
-        padding: 10px;
-        font-size: 20px;
-        cursor: pointer;
-        margin: 10px;
-    }
-    #easyBtn:hover {
-        background-color: darkslategray;
-        color: #fff;
-    }
-    #midBtn {
-        background-color: orange;
-        color: #fff;
-        border: none;
-        padding: 10px;
-        font-size: 20px;
-        cursor: pointer;
-        margin: 10px;
-    }
-    #midBtn:hover {
-        background-color: darkslategray;
-        color: #fff;
-    }
-    #hardBtn {
-        background-color: red;
-        color: #fff;
-        border: none;
-        padding: 10px;
-        font-size: 20px;
-        cursor: pointer;
-        margin: 10px;
-    }
-    #hardBtn:hover {
-        background-color: darkslategray;
-        color: #fff;
-    }
-
-
-</style>
 <body>
     
     <h1>Color Guessing Game</h1>
@@ -105,8 +17,9 @@
         <button id="midBtn">Medium</button>
         <button id="hardBtn">Hard</button>
     </div>
-    <div id="barvy">
-        <div id="colorDisplay"></div>
+    <div id="colors">
+        <div class="square"></div>
+        <div class="square"></div>
         <div class="square"></div>
         <div class="square"></div>
         <div class="square"></div>
@@ -118,26 +31,5 @@
 
 
 </body>
-<script>
-    var squares = document.querySelectorAll(".square");
-    var pickedColor = colors[3];
-    var colorDisplay = document.getElementById("colorDisplay");
-    colorDisplay.textContent = pickedColor;
-
-    for(var i = 0; i < squares.length; i++){
-        //add initial colors to squares
-        squares[i].style.backgroundColor = colors[i];
-        //add click listeners to squares
-        squares[i].addEventListener("click", function(){
-            //grab color of clicked square
-            var clickedColor = this.style.backgroundColor;
-            //compare color to pickedColor
-            if(clickedColor === pickedColor){
-                alert("Correct!");
-            } else {
-                alert("Wrong!");
-            }
-        });
-    }
-</script>
+<script src="js.js"></script>
 </html>
