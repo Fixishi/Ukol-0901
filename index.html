@@ -14,6 +14,11 @@
     }
     h1 {
         text-align: center;
+        font-size:420%;
+        font-weight: normal;
+        margin: 0px ;
+        color: aquamarine;
+        background-color: rgb(140, 0, 255);
     }
     .square {
         width: 100px;
@@ -22,33 +27,98 @@
         margin: 10px;
         display: inline-block;
     }
+    #barvy {
+        text-align: center;
+    }
+    .line {
+        text-align: center;
+        background-color: #fff;
+    }
+    .message {
+        text-align: center;
+        margin-top: 10px;
+        display: inline-block;
+        color : #8c00ff;
+    }
+    #reset {
+        background-color: #8c00ff;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        margin: 10px;
+    }
+    #reset:hover {
+        background-color: darkslategray;
+        color: #fff;
+    }
+    #easyBtn {
+        background-color: forestgreen;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        margin: 10px;
+    }
+    #easyBtn:hover {
+        background-color: darkslategray;
+        color: #fff;
+    }
+    #midBtn {
+        background-color: orange;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        margin: 10px;
+    }
+    #midBtn:hover {
+        background-color: darkslategray;
+        color: #fff;
+    }
+    #hardBtn {
+        background-color: red;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        margin: 10px;
+    }
+    #hardBtn:hover {
+        background-color: darkslategray;
+        color: #fff;
+    }
+
+
 </style>
 <body>
-    <!--Make Color guessing game-->
+    
     <h1>Color Guessing Game</h1>
-    <div id="colorDisplay"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-
+    <div class="line">
+        <button id="reset">New Colors</button>
+        <span id="message">You want to play, let's play!</span>
+        <button id="easyBtn">Easy</button>
+        <button id="midBtn">Medium</button>
+        <button id="hardBtn">Hard</button>
+    </div>
+    <div id="barvy">
+        <div id="colorDisplay"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+    </div>
 
 
 
 </body>
 <script>
-    var colors = [
-        "rgb(255, 0, 0)",
-        "rgb(255, 255, 0)",
-        "rgb(0, 255, 0)",
-        "rgb(0, 255, 255)",
-        "rgb(0, 0, 255)",
-        "rgb(0, 255, 94)",
-        "rgb(162, 189, 136)",
-        "rgb(230, 0, 119)",
-        "rgb(255, 0, 255)"
-    ];
     var squares = document.querySelectorAll(".square");
     var pickedColor = colors[3];
     var colorDisplay = document.getElementById("colorDisplay");
