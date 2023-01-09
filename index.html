@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Guessing Game</title>
+</head>
+<style>
+    body {
+        background-color: #232323;
+        color: #fff;
+        font-family: sans-serif;
+    }
+    h1 {
+        text-align: center;
+    }
+    .square {
+        width: 100px;
+        height: 100px;
+        background-color: #232323;
+        margin: 10px;
+        display: inline-block;
+    }
+</style>
+<body>
+    <!--Make Color guessing game-->
+    <h1>Color Guessing Game</h1>
+    <div id="colorDisplay"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+
+
+
+
+</body>
+<script>
+    var colors = [
+        "rgb(255, 0, 0)",
+        "rgb(255, 255, 0)",
+        "rgb(0, 255, 0)",
+        "rgb(0, 255, 255)",
+        "rgb(0, 0, 255)",
+        "rgb(0, 255, 94)",
+        "rgb(162, 189, 136)",
+        "rgb(230, 0, 119)",
+        "rgb(255, 0, 255)"
+    ];
+    var squares = document.querySelectorAll(".square");
+    var pickedColor = colors[3];
+    var colorDisplay = document.getElementById("colorDisplay");
+    colorDisplay.textContent = pickedColor;
+
+    for(var i = 0; i < squares.length; i++){
+        //add initial colors to squares
+        squares[i].style.backgroundColor = colors[i];
+        //add click listeners to squares
+        squares[i].addEventListener("click", function(){
+            //grab color of clicked square
+            var clickedColor = this.style.backgroundColor;
+            //compare color to pickedColor
+            if(clickedColor === pickedColor){
+                alert("Correct!");
+            } else {
+                alert("Wrong!");
+            }
+        });
+    }
+</script>
+</html>
